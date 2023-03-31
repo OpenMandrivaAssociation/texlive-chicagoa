@@ -1,6 +1,6 @@
 Name:		texlive-chicagoa
 Version:	52567
-Release:	1
+Release:	2
 Summary:	"Chicago" bibliography style with annotations
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/chicagoa
