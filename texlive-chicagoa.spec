@@ -3,7 +3,7 @@ Version:	52567
 Release:	2
 Summary:	"Chicago" bibliography style with annotations
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/chicagoa
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/chicagoa
 License:	other-free
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/chicagoa.r%{version}.tar.xz
 BuildArch:	noarch
