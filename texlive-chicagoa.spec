@@ -1,34 +1,21 @@
-Name:		texlive-chicagoa
-Version:	52567
-Release:	2
-Summary:	"Chicago" bibliography style with annotations
+%global tl_name chicagoa
+%global tl_revision 76790
+
+Name:		texlive-%{tl_name}
+Version:	%{tl_revision}
+Release:	1
+Summary:	Chicago bibliography style with annotations
 Group:		Publishing
-URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/chicagoa
+URL:		https://www.ctan.org/tex-archive/biblio/bibtex/contrib/misc/chicagoa.bst
 License:	other-free
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/chicagoa.r%{version}.tar.xz
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/chicagoa.r%{tl_revision}.tar.xz
 BuildArch:	noarch
+BuildSystem:	texlive
 BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+%texlive_base_requires
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-This is a modification of the author's chicago style, to
-support an 'annotation' field in bibliographies.
+This is a modification of the author's chicago style, to support an
+'annotation' field in bibliographies.
 
-%prep
-%autosetup -p1 -c
-
-%build
-
-%install
-rm -rf tlpkg
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -a * %{buildroot}%{_texmfdistdir}
-
-%files
-%{_texmfdistdir}/bibtex/bst/chicagoa
-
-%post -p %{_sbindir}/texlive.post
-
-%postun
-[ "$1" -eq 0 ] && %{_sbindir}/texlive.post
